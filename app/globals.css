@@ -1,26 +1,228 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg-canvas: #ffffff;
+  --bg-surface: #f4f5f7;
+  --bg-surface-alt: #eaecef;
+  --ink-primary: #0b0b0d;
+  --ink-secondary: #4b5563;
+  --ink-muted: #9ca3af;
+  --border-subtle: #e5e7eb;
+  --accent-emerald: #16a34a;
+  --accent-amber: #f59e0b;
+  --accent-red: #dc2626;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-background: var(--bg-canvas);
+  --color-foreground: var(--ink-primary);
+  --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-barlow), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, monospace;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  color-scheme: light;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg-canvas);
+  color: var(--ink-primary);
+  font-family: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.font-display-italic {
+  font-family: var(--font-barlow), ui-sans-serif, system-ui, sans-serif;
+  font-style: italic;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.font-display {
+  font-family: var(--font-barlow), ui-sans-serif, system-ui, sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.015em;
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Architectural diagonal cuts matching Arrow Ventures visual identity */
+.hero-slash-left {
+  clip-path: polygon(0 0, 100% 0, 82% 100%, 0 100%);
+}
+
+.story-photo-slash {
+  clip-path: polygon(0 0, 88% 0, 100% 100%, 10% 100%);
+}
+
+/* Accessible Native <dialog> Top-Layer Styling (Modern Web Guidance) */
+@layer components {
+  dialog.arrow-dialog {
+    margin: auto;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    max-width: calc(100vw - 2rem);
+    max-height: calc(100dvh - 2rem);
+    opacity: 0;
+    transition-property: opacity, transform, display, overlay;
+    transition-duration: 0.28s;
+    transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+    transition-behavior: allow-discrete;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    dialog.arrow-dialog {
+      transform: translateY(10px) scale(0.97);
+    }
+  }
+
+  dialog.arrow-dialog[open] {
+    opacity: 1;
+  }
+
+  dialog.arrow-dialog[open] {
+    @starting-style {
+      opacity: 0;
+    }
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    dialog.arrow-dialog[open] {
+      transform: translateY(0) scale(1);
+    }
+    dialog.arrow-dialog[open] {
+      @starting-style {
+        transform: translateY(10px) scale(0.97);
+      }
+    }
+  }
+
+  dialog.arrow-dialog:modal {
+    overscroll-behavior: contain;
+  }
+
+  dialog.arrow-dialog::backdrop {
+    background-color: rgba(11, 11, 13, 0);
+    backdrop-filter: blur(4px);
+    overflow: hidden;
+    overscroll-behavior: contain;
+    transition-property: background-color, display, overlay;
+    transition-duration: 0.28s;
+    transition-timing-function: ease-out;
+    transition-behavior: allow-discrete;
+  }
+
+  dialog.arrow-dialog[open]::backdrop {
+    background-color: rgba(11, 11, 13, 0.62);
+  }
+
+  dialog.arrow-dialog[open]::backdrop {
+    @starting-style {
+      background-color: rgba(11, 11, 13, 0);
+    }
+  }
+
+  /* Drawer variant anchored to right edge */
+  dialog.arrow-drawer {
+    margin: 0 0 0 auto;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    height: 100dvh;
+    max-height: 100dvh;
+    max-width: 100vw;
+    opacity: 0;
+    transition-property: opacity, transform, display, overlay;
+    transition-duration: 0.3s;
+    transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+    transition-behavior: allow-discrete;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    dialog.arrow-drawer {
+      transform: translateX(100%);
+    }
+  }
+
+  dialog.arrow-drawer[open] {
+    opacity: 1;
+  }
+
+  dialog.arrow-drawer[open] {
+    @starting-style {
+      opacity: 0;
+    }
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    dialog.arrow-drawer[open] {
+      transform: translateX(0);
+    }
+    dialog.arrow-drawer[open] {
+      @starting-style {
+        transform: translateX(100%);
+      }
+    }
+  }
+
+  dialog.arrow-drawer:modal {
+    overscroll-behavior: contain;
+  }
+
+  dialog.arrow-drawer::backdrop {
+    background-color: rgba(11, 11, 13, 0);
+    overflow: hidden;
+    overscroll-behavior: contain;
+    transition-property: background-color, display, overlay;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+    transition-behavior: allow-discrete;
+  }
+
+  dialog.arrow-drawer[open]::backdrop {
+    background-color: rgba(11, 11, 13, 0.52);
+  }
+
+  dialog.arrow-drawer[open]::backdrop {
+    @starting-style {
+      background-color: rgba(11, 11, 13, 0);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    dialog.arrow-dialog,
+    dialog.arrow-drawer,
+    dialog.arrow-dialog::backdrop,
+    dialog.arrow-drawer::backdrop {
+      transition-duration: 0.1s;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Custom subtle scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f4f5f7;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
 }
