@@ -303,7 +303,7 @@ function CheckoutContent() {
               <CheckCircle2 className="h-3.5 w-3.5" />
               Status: {createdOrder.status} · Payment: {createdOrder.payment_status}
             </span>
-            <h1 className="font-display-italic text-3xl sm:text-4xl">
+            <h1 className="font-display text-3xl sm:text-4xl">
               Order {createdOrder.order_number}
             </h1>
             <p className="text-xs sm:text-sm text-neutral-300">
@@ -442,7 +442,7 @@ function CheckoutContent() {
           <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-neutral-500">
             SECURE CHECKOUT
           </p>
-          <h1 className="font-display-italic text-3xl sm:text-4xl text-[#0B0B0D] mt-1">
+          <h1 className="font-display text-3xl sm:text-4xl text-[#0B0B0D] mt-1">
             Delivery & Payment
           </h1>
         </div>

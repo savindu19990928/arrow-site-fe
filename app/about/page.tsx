@@ -42,11 +42,11 @@ export default function AboutPage() {
               <span className="text-white font-medium">About Us</span>
             </nav>
 
-            <h1 className="font-display-italic text-5xl sm:text-6xl leading-none">
+            <h1 className="font-display text-4xl sm:text-5xl font-bold leading-[1.12] tracking-tight">
               <span className="text-white">About </span>
               <span className="text-neutral-300">Us</span>
             </h1>
-            <p className="mt-3 text-sm sm:text-base text-neutral-200 max-w-sm leading-relaxed">
+            <p className="mt-3 text-base text-neutral-200 max-w-md leading-relaxed">
               Driving a greener, smarter and more connected Sri Lanka.
             </p>
             <div className="mt-5 h-0.5 w-16 bg-white/80" />
@@ -75,21 +75,21 @@ export default function AboutPage() {
               <span className="h-px w-12 bg-neutral-300" />
             </div>
 
-            <h2 className="font-display-italic text-4xl text-[#0B0B0D]">
+            <h2 className="font-display text-3xl sm:text-4xl font-bold text-[#0B0B0D]">
               Arrow Ventures
             </h2>
 
-            <p className="font-display-italic text-lg text-[#0B0B0D]">
+            <p className="text-lg font-semibold text-[#0B0B0D] leading-snug">
               More than just a ride — a better way forward.
             </p>
 
-            <p className="text-sm text-neutral-600 leading-relaxed max-w-xl">
+            <p className="text-base text-neutral-600 leading-relaxed max-w-[65ch]">
               Arrow Ventures was founded with a simple vision: to make clean,
               efficient, and enjoyable electric transportation accessible to
               riders across Sri Lanka — from bustling Colombo daily commutes to
               challenging central highland climbs.
             </p>
-            <p className="text-sm text-neutral-600 leading-relaxed max-w-xl">
+            <p className="text-base text-neutral-600 leading-relaxed max-w-[65ch]">
               We believe in the power of electric cycles to build a greener
               future, reduce transport carbon footprint, and bring riders closer
               to a healthier, cost-effective lifestyle backed by genuine spare
@@ -156,11 +156,11 @@ export default function AboutPage() {
               <span className="h-px w-12 bg-neutral-300" />
             </div>
 
-            <h2 className="font-display-italic text-4xl sm:text-5xl text-[#0B0B0D] leading-[0.98]">
+            <h2 className="font-display text-3xl sm:text-4xl font-bold text-[#0B0B0D] leading-[1.15]">
               Your Trusted E-Cycle Partner
             </h2>
 
-            <p className="text-sm text-neutral-600 leading-relaxed">
+            <p className="text-base text-neutral-600 leading-relaxed max-w-[65ch]">
               At Arrow Ventures, we are committed to delivering more than just
               products. We provide a complete e-mobility experience with
               interactive 3D inspection, genuine components, and dedicated care.
@@ -251,10 +251,10 @@ export default function AboutPage() {
 
           <div className="relative z-10 mx-auto max-w-7xl w-full px-4 sm:px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="md:ml-auto md:w-1/2 space-y-3 text-center md:text-left">
-              <h2 className="font-display-italic text-3xl sm:text-4xl text-white">
+              <h2 className="font-display text-2xl sm:text-3xl font-bold text-white">
                 Join the Arrow Ventures Family
               </h2>
-              <p className="text-xs sm:text-sm text-neutral-300">
+              <p className="text-sm sm:text-base text-neutral-300 leading-relaxed">
                 Let&apos;s ride towards a cleaner, greener, and brighter future
                 across Sri Lanka together.
               </p>

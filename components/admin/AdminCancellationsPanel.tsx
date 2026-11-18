@@ -159,7 +159,7 @@ export function AdminCancellationsPanel() {
                   </div>
                   <p className="text-neutral-700">{c.reason}</p>
                   {c.admin_note && (
-                    <p className="text-neutral-500 italic">
+                    <p className="text-neutral-500">
                       Admin note: {c.admin_note}
                     </p>
                   )}

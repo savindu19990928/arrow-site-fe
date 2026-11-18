@@ -435,7 +435,7 @@ function AccountPortalContent() {
           <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-neutral-500">
             CUSTOMER PORTAL
           </p>
-          <h1 className="font-display-italic text-3xl sm:text-4xl text-[#0B0B0D] mt-1">
+          <h1 className="font-display text-3xl sm:text-4xl text-[#0B0B0D] mt-1">
             Hello, {user?.first_name || user?.email}
           </h1>
           <p className="text-xs text-neutral-500 mt-0.5">{user?.email}</p>
@@ -649,7 +649,7 @@ function AccountPortalContent() {
                       </p>
                       <p className="text-neutral-500">{addr.phone_number}</p>
                       {addr.delivery_notes && (
-                        <p className="italic text-neutral-500">
+                        <p className="text-neutral-500">
                           Note: {addr.delivery_notes}
                         </p>
                       )}

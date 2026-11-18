@@ -120,7 +120,7 @@ function TrackOrderContent() {
         <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-neutral-500">
           ORDER TRACKING
         </p>
-        <h1 className="font-display-italic text-4xl text-[#0B0B0D] mt-1">
+        <h1 className="font-display text-3xl sm:text-4xl text-[#0B0B0D] mt-1">
           Track Your Arrow Order
         </h1>
         <p className="mt-2 text-xs sm:text-sm text-neutral-600">
@@ -191,7 +191,7 @@ function TrackOrderContent() {
               <p className="font-mono text-xs text-neutral-400">
                 Placed {formatDateTimeSL(order.placed_at)}
               </p>
-              <h2 className="font-display-italic text-3xl mt-0.5">
+              <h2 className="font-display text-2xl sm:text-3xl mt-0.5">
                 {order.order_number}
               </h2>
               <p className="text-xs text-neutral-300 mt-1">

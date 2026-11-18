@@ -37,12 +37,12 @@ export function TestimonialCarousel({ reviews }: TestimonialCarouselProps) {
       <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
         <div>
           <div className="flex items-center gap-3 mb-2">
-            <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-neutral-500">
+            <span className="font-mono text-[11px] font-semibold uppercase tracking-[0.2em] text-neutral-500">
               WHAT OUR CUSTOMERS SAY
             </span>
             <span className="h-px w-12 bg-neutral-300" />
           </div>
-          <h2 className="font-display text-2xl sm:text-3xl text-[#0B0B0D]">
+          <h2 className="font-display text-2xl sm:text-3xl font-bold tracking-[-0.03em] text-[#0B0B0D]">
             Trusted by Riders Across Sri Lanka
           </h2>
         </div>

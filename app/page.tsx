@@ -137,12 +137,12 @@ async function HomeContent() {
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-7">
           <div>
             <div className="flex items-center gap-3 mb-1.5">
-              <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-neutral-500">
+              <span className="font-mono text-[11px] font-semibold uppercase tracking-[0.2em] text-neutral-500">
                 FEATURED PRODUCTS
               </span>
               <span className="h-px w-12 bg-neutral-300" />
             </div>
-            <h2 className="font-display text-3xl sm:text-4xl text-[#0B0B0D]">
+            <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-[-0.03em] text-[#0B0B0D]">
               Power. Performance. Style.
             </h2>
           </div>

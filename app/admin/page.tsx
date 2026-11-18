@@ -44,7 +44,7 @@ export default function AdminDashboardPage() {
       <div className="mx-auto max-w-lg px-4 py-20 text-center">
         <div className="rounded-3xl border border-neutral-200 bg-[#F4F5F7] p-8 space-y-4">
           <ShieldAlert className="h-10 w-10 text-[#0B0B0D] mx-auto" />
-          <h1 className="font-display-italic text-3xl text-[#0B0B0D]">
+          <h1 className="font-display text-3xl text-[#0B0B0D]">
             Staff & Admin Access Required
           </h1>
           <p className="text-xs sm:text-sm text-neutral-600">
@@ -79,7 +79,7 @@ export default function AdminDashboardPage() {
           <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-neutral-500">
             ARROW VENTURES OPERATIONS
           </p>
-          <h1 className="font-display-italic text-3xl sm:text-4xl text-[#0B0B0D] mt-1">
+          <h1 className="font-display text-3xl sm:text-4xl text-[#0B0B0D] mt-1">
             Admin Command Center
           </h1>
           <p className="text-xs text-neutral-500 mt-0.5">

@@ -113,11 +113,11 @@ export function ProductCard({ product, badgeText, compact = false }: ProductCard
         {/* Info */}
         <Link href={`/products/${product.slug}`} className="block">
           {!compact && (
-            <p className="text-[11px] font-medium text-neutral-500 mb-0.5 truncate">
+            <p className="font-mono text-[10.5px] font-medium uppercase tracking-[0.12em] text-neutral-500 mb-1 truncate">
               {product.category?.name}
             </p>
           )}
-          <h3 className="font-semibold text-[15px] leading-snug text-[#0B0B0D] line-clamp-2 min-h-[2.6rem] group-hover:underline decoration-neutral-400 underline-offset-2">
+          <h3 className="font-display font-bold text-[15.5px] leading-snug tracking-[-0.02em] text-[#0B0B0D] line-clamp-2 min-h-[2.65rem] group-hover:underline decoration-neutral-400 underline-offset-2">
             {product.name}
           </h3>
         </Link>
@@ -146,7 +146,7 @@ export function ProductCard({ product, badgeText, compact = false }: ProductCard
 
         {/* Price row */}
         <div className="mt-2 flex items-baseline gap-2 flex-wrap">
-          <span className="text-base font-extrabold text-[#0B0B0D] tabular-nums">
+          <span className="font-display text-[17px] font-bold tracking-[-0.025em] text-[#0B0B0D] tabular-nums">
             {formatLKR(product.price)}
           </span>
           {hasCompareAt && (

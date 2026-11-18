@@ -49,17 +49,17 @@ export function ArrowLogo({
         color={isLight ? "#FFFFFF" : "#0B0B0D"}
       />
       {showText && (
-        <span className="flex flex-col leading-[0.86]">
+        <span className="flex flex-col leading-none">
           <span
-            className={`font-display-italic text-[19px] tracking-tight uppercase ${
+            className={`font-display font-bold text-[18px] tracking-[-0.035em] uppercase ${
               isLight ? "text-white" : "text-[#0B0B0D]"
             }`}
           >
             ARROW
           </span>
           <span
-            className={`font-display-italic text-[14px] tracking-tight uppercase ${
-              isLight ? "text-neutral-200" : "text-[#0B0B0D]"
+            className={`font-mono font-semibold text-[10px] tracking-[0.22em] uppercase mt-0.5 ${
+              isLight ? "text-neutral-300" : "text-neutral-600"
             }`}
           >
             VENTURES

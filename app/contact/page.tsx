@@ -32,7 +32,7 @@ export default function ContactPage() {
         <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-neutral-500">
           SUPPORT & SHOWROOM
         </p>
-        <h1 className="font-display-italic text-4xl sm:text-5xl text-[#0B0B0D] mt-1">
+        <h1 className="font-display text-3xl sm:text-4xl text-[#0B0B0D] mt-1">
           Contact Arrow Ventures
         </h1>
         <p className="mt-2.5 text-sm text-neutral-600 leading-relaxed">

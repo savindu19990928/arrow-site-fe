@@ -53,7 +53,7 @@ function LoginForm() {
         <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-neutral-500">
           ARROW VENTURES ACCOUNT
         </p>
-        <h1 className="font-display-italic text-3xl text-[#0B0B0D] mt-1">
+        <h1 className="font-display text-3xl text-[#0B0B0D] mt-1">
           Welcome Back
         </h1>
         <p className="text-xs text-neutral-600 mt-1">

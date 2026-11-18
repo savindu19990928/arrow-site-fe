@@ -433,12 +433,12 @@ export function ProductDetailClient({
             </span>
           </div>
 
-          <h1 className="font-display-italic text-3xl sm:text-4xl text-[#0B0B0D] leading-tight">
+          <h1 className="font-display text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0B0B0D] leading-tight">
             {product.name}
           </h1>
 
           {product.short_description && (
-            <p className="mt-1.5 text-sm italic font-medium text-neutral-600 leading-snug">
+            <p className="mt-2 text-base text-neutral-600 leading-relaxed max-w-[65ch]">
               {product.short_description}
             </p>
           )}
@@ -471,7 +471,7 @@ export function ProductDetailClient({
 
           {/* Price */}
           <div className="mt-4 flex items-center gap-3 flex-wrap">
-            <span className="text-2xl sm:text-3xl font-extrabold text-[#0B0B0D] tabular-nums">
+            <span className="font-display text-2xl sm:text-3xl font-bold tracking-[-0.03em] text-[#0B0B0D] tabular-nums">
               {formatLKR(displayPrice)}
             </span>
             {hasCompareAt && (
@@ -695,10 +695,10 @@ export function ProductDetailClient({
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
             {/* Left Copy */}
             <div className="lg:col-span-4 space-y-4">
-              <h2 className="font-display-italic text-3xl text-[#0B0B0D] leading-tight">
+              <h2 className="font-display text-2xl sm:text-3xl font-bold text-[#0B0B0D] leading-tight">
                 Power Meets Performance
               </h2>
-              <p className="text-sm text-neutral-600 leading-relaxed">
+              <p className="text-base text-neutral-600 leading-relaxed max-w-[65ch]">
                 {product.description || product.short_description}
               </p>
               <ul className="space-y-2 pt-1">

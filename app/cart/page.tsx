@@ -80,7 +80,7 @@ export default function CartPage() {
           <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-neutral-500">
             SHOPPING BAG
           </p>
-          <h1 className="font-display-italic text-3xl sm:text-4xl text-[#0B0B0D] mt-1">
+          <h1 className="font-display text-3xl sm:text-4xl text-[#0B0B0D] mt-1">
             Your Shopping Cart
           </h1>
         </div>

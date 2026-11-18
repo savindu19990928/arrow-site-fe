@@ -36,8 +36,8 @@ export function HeroCarousel({
       {
         id: "flagship-ride",
         eyebrow: "ARROW VENTURES",
-        titleLine1: "RIDE THE",
-        titleLine2: "FUTURE",
+        titleLine1: "Ride the",
+        titleLine2: "Future",
         subtitle:
           "Premium Electric Cycles for a Smarter, Greener Tomorrow across Sri Lanka.",
         ctaLabel: "Shop Electric Cycles",
@@ -55,10 +55,10 @@ export function HeroCarousel({
       list.push({
         id: `campaign-${c.id}`,
         eyebrow: "SPECIAL CAMPAIGN",
-        titleLine1: c.title.split(" ").slice(0, 2).join(" ").toUpperCase(),
+        titleLine1: c.title.split(" ").slice(0, 2).join(" "),
         titleLine2:
-          c.title.split(" ").slice(2).join(" ").toUpperCase() ||
-          `${Math.round(parseFloat(c.discount_percentage || "0"))}% OFF`,
+          c.title.split(" ").slice(2).join(" ") ||
+          `${Math.round(parseFloat(c.discount_percentage || "0"))}% Off`,
         subtitle:
           c.description ||
           "Limited-time promotional offer across Sri Lanka.",
@@ -81,8 +81,8 @@ export function HeroCarousel({
       list.push({
         id: `spotlight-${ebikeSpotlight.slug}`,
         eyebrow: "SRI LANKA TRAIL EDITION",
-        titleLine1: "CONQUER",
-        titleLine2: "EVERY HILL",
+        titleLine1: "Conquer",
+        titleLine2: "Every Hill",
         subtitle: `${ebikeSpotlight.name} — ${formatLKR(ebikeSpotlight.price)}. Built for Kandy hills & city commutes.`,
         ctaLabel: "Inspect in 3D",
         ctaHref: `/products/${ebikeSpotlight.slug}`,
@@ -104,8 +104,8 @@ export function HeroCarousel({
       list.push({
         id: `spotlight-${secondBike.slug}`,
         eyebrow: "ISLANDWIDE DELIVERY",
-        titleLine1: "BUILT FOR",
-        titleLine2: "PERFORMANCE",
+        titleLine1: "Built for",
+        titleLine2: "Performance",
         subtitle: `${secondBike.name} — Starting at ${formatLKR(secondBike.price)} with Koko & Mintpay 3x installments.`,
         ctaLabel: "Shop Now",
         ctaHref: `/products/${secondBike.slug}`,
@@ -176,7 +176,7 @@ export function HeroCarousel({
         {/* Subtle Arrow Brand Watermark on right */}
         <div className="hidden xl:flex absolute right-8 bottom-12 z-10 flex-col items-center opacity-20 pointer-events-none select-none">
           <ArrowMark className="h-20 w-20" color="#FFFFFF" />
-          <span className="font-display-italic text-sm tracking-widest mt-1">
+          <span className="font-display font-bold text-xs tracking-[0.22em] uppercase mt-1.5">
             ARROW VENTURES
           </span>
         </div>
@@ -184,24 +184,26 @@ export function HeroCarousel({
         {/* Hero Copy Overlay */}
         <div className="relative z-10 mx-auto max-w-7xl w-full px-4 sm:px-6 py-14 sm:py-16 lg:py-20">
           <div className="max-w-xl">
-            <div className="flex items-center gap-3 mb-3">
-              <span className="text-[11px] sm:text-xs font-bold tracking-[0.2em] uppercase text-neutral-300">
+            <div className="flex items-center gap-3 mb-3.5">
+              <span className="font-mono text-[11px] sm:text-xs font-semibold tracking-[0.2em] uppercase text-emerald-300">
                 {current.eyebrow}
               </span>
               <span className="h-px w-12 bg-neutral-500" />
               {current.badge && (
-                <span className="rounded-full bg-white/15 border border-white/20 px-2.5 py-0.5 text-[10px] font-semibold text-white">
+                <span className="font-mono rounded-full bg-white/15 border border-white/20 px-2.5 py-0.5 text-[11px] font-semibold text-white">
                   {current.badge}
                 </span>
               )}
             </div>
 
-            <h1 className="font-display-italic text-5xl sm:text-6xl lg:text-7xl leading-[0.94] uppercase tracking-tight">
+            <h1 className="font-display text-5xl sm:text-6xl lg:text-[4.25rem] font-bold leading-[1.02] tracking-[-0.035em]">
               <span className="block text-white">{current.titleLine1}</span>
-              <span className="block text-neutral-300">{current.titleLine2}</span>
+              <span className="block bg-gradient-to-r from-white via-neutral-200 to-emerald-300 bg-clip-text text-transparent">
+                {current.titleLine2}
+              </span>
             </h1>
 
-            <p className="mt-4 text-sm sm:text-base text-neutral-300 max-w-md leading-relaxed">
+            <p className="mt-4 text-base sm:text-lg text-neutral-200 max-w-[52ch] leading-relaxed">
               {current.subtitle}
             </p>
 

@@ -365,7 +365,7 @@ export function ShopCatalogClient({
           <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-neutral-500">
             ARROW VENTURES CATALOG
           </p>
-          <h1 className="font-display-italic text-3xl sm:text-4xl text-[#0B0B0D] mt-1">
+          <h1 className="font-display text-3xl sm:text-4xl text-[#0B0B0D] mt-1">
             Electric Cycles, Parts & Gear
           </h1>
           <p className="text-xs sm:text-sm text-neutral-600 mt-1">

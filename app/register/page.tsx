@@ -55,7 +55,7 @@ export default function RegisterPage() {
         <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-neutral-500">
           JOIN ARROW VENTURES
         </p>
-        <h1 className="font-display-italic text-3xl text-[#0B0B0D] mt-1">
+        <h1 className="font-display text-3xl text-[#0B0B0D] mt-1">
           Create Customer Account
         </h1>
         <p className="text-xs text-neutral-600 mt-1">
